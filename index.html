@@ -6,9 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-
-    <title>TITLE</title>
-
+    <title>BarCamp-Session Countdown</title>
     <link rel="stylesheet" href="reveal.js/dist/reset.css" />
     <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
     <link
@@ -16,92 +14,242 @@
       href="reveal.js/dist/theme/solarized.css"
       id="theme"
     />
-
-    <!-- Theme used for syntax highlighted code -->
     <link
       rel="stylesheet"
       href="reveal.js/plugin/highlight/monokai.css"
       id="highlight-theme"
     />
+    <style>
+      .timer-box {
+        margin: 40px 0;
+        padding: 30px;
+        background: #f0f0f0;
+        border-radius: 8px;
+        font-size: 1.5em;
+      }
+      .timer-box strong {
+        font-size: 1.4em;
+      }
+      .timer-box strong span {
+        color: #0066cc;
+        transition: color 0.3s;
+      }
+      .timer-box.urgent strong span {
+        color: #cc0000 !important;
+      }
+      .done {
+        color: green;
+        font-weight: bold;
+        font-size: 2em;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section
-          data-markdown
-          data-separator="-----"
-          data-separator-vertical="---"
-        >
-          <textarea data-template>
-            # Title Page
-
-            ### Date
-
-            -----
-            ## Fragment <!-- .element: class="fragment" -->
-            -----
-            ## Start visible, fade out <!-- .element: class="fragment fade-out" -->
-            -----
-            ## Slide up while fading in <!-- .element: class="fragment fade-up" -->
-            -----
-            ## Slide down while fading in <!-- .element: class="fragment fade-down" -->
-            -----
-            ## Slide left while fading in <!-- .element: class="fragment fade-left" -->
-            -----
-            ## Slide right while fading in <!-- .element: class="fragment fade-right" -->
-            -----
-            ## Fades in, then out on the next step <!-- .element: class="fragment fade-in-then-out" -->
-            -----
-            ## Fades in, then out on the next step <!-- .element: class="fragment current-visible" -->
-            -----
-            ## Fades in, then to 50% on the next step <!-- .element: class="fragment fade-in-then-semi-out" -->
-            -----
-            ## Scale up <!-- .element: class="fragment grow" -->
-            -----
-            ## Fade out to 50% <!-- .element: class="fragment semi-fade-out" -->
-            -----
-            ## Scale down <!-- .element: class="fragment shrink" -->
-            -----
-            ## Strike through <!-- .element: class="fragment strike" -->
-            -----
-            ## Turn text red <!-- .element: class="fragment highlight-red" -->
-            -----
-            ## Turn text green <!-- .element: class="fragment highlight-green" -->
-            -----
-            ## Turn text blue <!-- .element: class="fragment highlight-blue" -->
-            -----
-            ## Turn text red, then back to original on next step <!-- .element: class="fragment highlight-current-red" -->
-            -----
-            ## Turn text green, then back to original on next step <!-- .element: class="fragment highlight-current-green" -->
-            -----
-            ## Turn text blue, then back to original on next step <!-- .element: class="fragment highlight-current-blue" -->
-            -----
-
-            ## made with
-
-            #### [reveal.js](https://github.com/hakimel/reveal.js)
-            #### and
-            #### [CREATE-NEW-REVEAL.JS](https://github.com/pacharanero/create-new-revealjs-template)
-
-          </textarea>
+        <!-- Folie 1 -->
+        <section>
+          <h1>Willkommen.</h1>
+          <p>Hier ist eine Vorlage für ein kollaboratives Barcamp mit integriertem Coundown. Passe sie an und nutze sie weiter.</p>
+        </section>
+        
+        <!-- Folie 2 -->
+        <section>
+          <h2>Schritt 1: Themensammlung</h2>
+          <p>Notiere auf einer Karte ein (möglichst konkretes) Thema oder eine Frage, die für dich besonders relevant ist.</p>
+        </section>
+        
+        <!-- Folie 3 -->
+        <section>
+          <h2>Schritt 2: Themenclusterung</h2>
+          <p>Bewegt euch durch den Raum und stellt euch in Paargesprächen eure Themen vor!</p>
+          <ol>
+            <li>Beide finden ihr Thema wichtiger → Karten behalten.</li>
+            <li>Beide finden das jeweils andere Thema wichtiger → Karten tauschen</li>
+            <li>Beide finden ein Thema wichtiger als das andere → Mit dieser Karte als Gruppe weitermachen.</li>
+            <li>Ein neues Thema finden, das noch wichtiger ist → Aufschreiben und mit dieser Karte weiter machen.</li>
+          </ol>
+        </section>
+        
+        <!-- Folie 4 -->
+        <section>
+          <h2>Schritt 3: Sessionplanung</h2>
+          <p>Wir nehmen die entwickelten Themen in unseren Sessionplan auf!</p>
+        </section>
+        
+        <!-- Session 1 -->
+        <section>
+          <div class="timer-box" id="box1">
+            Session I startet in <br><strong><span id="timer1"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box2">
+            Session I endet in <br><strong><span id="timer2"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Session 2 -->
+        <section>
+          <div class="timer-box" id="box3">
+            Session II startet in <br><strong><span id="timer3"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box4">
+            Session II endet in <br><strong><span id="timer4"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Session 3 -->
+        <section>
+          <div class="timer-box" id="box5">
+            Session III startet in <br><strong><span id="timer5"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box6">
+            Session III endet in <br><strong><span id="timer6"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Session 4 -->
+        <section>
+          <div class="timer-box" id="box7">
+            Session IV startet in <br><strong><span id="timer7"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box8">
+            Session IV endet in <br><strong><span id="timer8"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Session 5 -->
+        <section>
+          <div class="timer-box" id="box9">
+            Session V startet in <br><strong><span id="timer9"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box10">
+            Session V endet in <br><strong><span id="timer10"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Session 6 -->
+        <section>
+          <div class="timer-box" id="box11">
+            Session VI startet in <br><strong><span id="timer11"></span></strong>
+          </div>
+        </section>
+        
+        <section>
+          <div class="timer-box" id="box12">
+            Session VI endet in <br><strong><span id="timer12"></span></strong>
+          </div>
+        </section>
+        
+        <!-- Abschluss -->
+        <section>
+          <h2>Zusammenfassung im Plenum</h2>
+          <p>Was wollen wir teilen?</p>
         </section>
       </div>
     </div>
-
+    
     <script src="reveal.js/dist/reveal.js"></script>
     <script src="reveal.js/plugin/notes/notes.js"></script>
     <script src="reveal.js/plugin/markdown/markdown.js"></script>
     <script src="reveal.js/plugin/highlight/highlight.js"></script>
     <script src="reveal.js/plugin/zoom/zoom.js"></script>
     <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
+      // ========================================
+      // HIER ZEITEN ANPASSEN:
+      // ========================================
+      const SESSION_TIMES = {
+        session1Start: '14:00',
+        session1End: '14:20',
+        session2Start: '14:30',
+        session2End: '14:50',
+        session3Start: '15:00',
+        session3End: '15:20',
+        session4Start: '15:30',
+        session4End: '15:50',
+        session5Start: '16:00',
+        session5End: '16:20',
+        session6Start: '16:30',
+        session6End: '16:50'
+      };
+      // ========================================
+      
       Reveal.initialize({
         hash: true,
-
-        // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],
+      });
+      
+      function createTimer(elementId, targetTime, boxId) {
+        const element = document.getElementById(elementId);
+        const box = document.getElementById(boxId);
+        const [hours, minutes] = targetTime.split(':');
+        const target = new Date();
+        target.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+        let soundPlayed = false;
+        let intervalId;
+        
+        function update() {
+          const now = new Date();
+          const diff = target - now;
+          
+          if (diff <= 0) {
+            element.innerHTML = '<span class="done">jetzt!</span>';
+            box.style.background = '#d4edda';
+            
+            if (!soundPlayed) {
+              const audio = new Audio('gong.wav');
+              audio.play().catch(e => console.log('Audio play failed:', e));
+              soundPlayed = true;
+            }
+            
+            clearInterval(intervalId);
+            return;
+          }
+          
+          const totalSeconds = Math.floor(diff / 1000);
+          const mins = Math.floor(totalSeconds / 60);
+          const secs = totalSeconds % 60;
+          
+          if (totalSeconds < 60) {
+            box.classList.add('urgent');
+          } else {
+            box.classList.remove('urgent');
+          }
+          
+          element.textContent = `${mins}:${secs.toString().padStart(2, '0')} Minuten`;
+        }
+        
+        update();
+        intervalId = setInterval(update, 1000);
+      }
+      
+      Reveal.on('ready', () => {
+        createTimer('timer1', SESSION_TIMES.session1Start, 'box1');
+        createTimer('timer2', SESSION_TIMES.session1End, 'box2');
+        createTimer('timer3', SESSION_TIMES.session2Start, 'box3');
+        createTimer('timer4', SESSION_TIMES.session2End, 'box4');
+        createTimer('timer5', SESSION_TIMES.session3Start, 'box5');
+        createTimer('timer6', SESSION_TIMES.session3End, 'box6');
+        createTimer('timer7', SESSION_TIMES.session4Start, 'box7');
+        createTimer('timer8', SESSION_TIMES.session4End, 'box8');
+        createTimer('timer9', SESSION_TIMES.session5Start, 'box9');
+        createTimer('timer10', SESSION_TIMES.session5End, 'box10');
+        createTimer('timer11', SESSION_TIMES.session6Start, 'box11');
+        createTimer('timer12', SESSION_TIMES.session6End, 'box12');
       });
     </script>
   </body>
